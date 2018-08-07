@@ -4,10 +4,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="row">
-                <div class="col-lg-12 margin-tb">
-                    <div class="pull-left">
-                        <a class="btn btn-success" href="{{ route('home') }}"> Home</a>
-                    </div>
+                <div class="col-lg-11 margin-tb">
                     <div class="pull-right">
                         <a class="btn btn-success" href="{{ route('tasks.add') }}"> Add Task</a>
                     </div>
@@ -26,7 +23,7 @@
                                 <th style="width: 10px">ID</th>
                                 <th>Name</th>
                                 <th>Description</th>
-                                <th style="width: 190px">Status</th>
+                                <th style="width: 190px">Status(%)</th>
                                 <th>User ID</th>
                                 <th>Assign</th>
                                 <th style="width: 100px">Action</th>
@@ -55,7 +52,7 @@
                                         </td>
                                     @else ($task->status >=90)
                                         <td><div class="progress progress-striped active">
-                                                <div class="progress-bar progress-bar-success" role="progressbar" data-transitiongoal="{{ $task->status }}"></div>
+                                                <div class="progress-bar progress-bar-success"  role="progressbar" data-transitiongoal="{{ $task->status }}"></div>
                                             </div>
                                         </td>
                                     @endif

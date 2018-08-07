@@ -35,7 +35,7 @@ class CRUDController extends Controller
         Task::create($taskData);
 
         //store status message
-        Session::flash('success_msg', 'Post added successfully!');
+        Session::flash('success_msg', 'Task added successfully!');
 
         return redirect()->route('tasks.index');
     }
